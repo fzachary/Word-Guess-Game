@@ -1,0 +1,10 @@
+body {
+    background: url("../images/golf-background.jpg");
+    color: yellow;
+    font-size: 36px;
+    line-height: 50px;
+}
+
+.spaces {
+    color: yellow;
+}
