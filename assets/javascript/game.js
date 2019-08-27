@@ -1,8 +1,8 @@
-// GLOBAL VARIABLES (accessible by all functions)
+// GLOBAL VARIABLES
 // =================================================================
 
 // Array of Word Options (all lowercase).
-var wordslist = [
+var wordsList = [
     "birdie", "eagle", "bunker", "fairway", "ball", "tee", "clubhead", "flagstick", "bogey", "clubhouse", "driver", "wedge", "divot", "mulligan", "dogleg", "gimme",
         ];
 // Computer selected solution will be held here.
@@ -28,12 +28,11 @@ var winCounter = 0;
 var lossCounter = 0;
 var numGuesses = 9;
 
-// FUNCTIONS (These are bits of code that we will call upon to run when needed)
+// FUNCTIONS
 // =================================================================
 
-// startGame()
+// Function to start the game
 // This is how we will start and restart the game.
-// Note: it's not being run here. Function declarations like this are made for future use.)
 
 function startGame() {
 
@@ -41,7 +40,7 @@ function startGame() {
     numGuesses = 9;
 
     // Solution chosen randomly from wordList
-    chosenWord = wordslist[Math.floor(Math.random() * wordslist.length)];
+    chosenWord = wordsList[Math.floor(Math.random() * wordsList.length)];
 
     // The word is broken into individual letters
     lettersInChosenWord = chosenWord.split("");
@@ -56,7 +55,7 @@ function startGame() {
     // Here we *reset* the guess and success array at each rounf
     blanksAndSuccesses = [];
 
-    // Critical
+    // CRITICAL
     // Here we *reset* the wrong guesses from the previous round.
     wrongGuesses = [];
 
@@ -79,10 +78,9 @@ function startGame() {
     document.getElementById("letters").innerHTML = wrongGuesses.join(" ");
 }
 
-// checkLetters() function
+// Function to check the letters
 // Where we do all of the comparisons for matches
 // Again, not being called, just made for future use
-
 function checkLetters(letter) {
 
     // This boolean will be toggled based on whether or not a user letter is found in the word
@@ -132,9 +130,9 @@ function checkLetters(letter) {
 
     }
 
-    // roundComplete() function
-    // Here we will have all pf the code that needs to be run afer each guess is made
-    function roundComplete() {
+
+// Here we will have all pf the code that needs to be run afer each guess is made
+function roundComplete() {
 
     // First, log an initial status update in the console telling us how many wins, losses, and guesses are left
     console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses);
