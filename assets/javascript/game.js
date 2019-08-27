@@ -115,7 +115,7 @@ function checkLetters(letter) {
         }
 
         // Log the current blanks and successes for testing
-        console.log(blanksAndSuccesses);
+        // console.log(blanksAndSuccesses);
 
     }
 
