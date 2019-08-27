@@ -50,7 +50,7 @@ function startGame() {
     numBlanks = lettersInChosenWord.length;
 
     // Print the solution in the console (for testing)
-    console.log(chosenWord);
+    // console.log(chosenWord);
 
     // CRITICAL
     // Here we *reset* the guess and success array at each rounf
@@ -66,8 +66,8 @@ function startGame() {
         blanksAndSuccesses.push("_");
     }
 
-    // Print the initial blanks in console
-    console.log(blanksAndSuccesses);
+    // Print the initial blanks in console (for testing)
+    // console.log(blanksAndSuccesses);
 
     // Reprints the guessesLeft to 9
     document.getElementById("guesses-left").innerHTML = "Guesses left: " + numGuesses;
@@ -205,31 +205,3 @@ document.onkeyup = function(event) {
     // Runs the code that ends each round
     roundComplete();
 };
-
-
-
-
-// document.getElementById("guesses-left").innerHTML = ("You have " + guessesLeft + " guesses left!");
-
-// var userGuess = [];
-
-// for(var i = 0; i < word.length; i++) {
-//     document.getElementById("spaces").innerHTML += "_ ";
-// }
-
-// document.onkeyup = function(event) {
-//     var key = event.key;
-//     var bigKey = key.toUpperCase();
-//     userGuess.push(bigKey);
-//     var wordArr = word.match(bigKey);
-//     console.log(wordArr);
-//     // document.getElementById("spaces").innerHTML = "";
-//     for(var i = 0; i < word.length; i++) {
-//         if(wordArr == word[i]) {
-//         document.getElementById("spaces").innerHTML = userGuess.join("");
-//         var guesses = guessesLeft--;
-//         console.log(guesses);
-//         document.getElementById("guesses-left").innerHTML = ("You have " + guesses + " guesses left!");
-//         }
-//     }
-// }
